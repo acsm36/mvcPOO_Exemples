@@ -1,0 +1,18 @@
+{% extends "template.html.twig" %}
+
+{% block title %}Liste des articles{% endblock %}
+
+{% block body %}
+<h1>Bienvenue sur les articles</h1>
+
+{% for article in articles %}
+
+<p>Id d'article : {{ article.id_article }}</p>
+<p>Titre : {{ article.titre }}</p>
+<p>{{ article.texte|nl2br }}</p>
+<p><a href="{{baseUrl}}/article/show/{{article.id_article}}">Lien</a></p>
+
+{% endfor %}
+
+
+{% endblock %}

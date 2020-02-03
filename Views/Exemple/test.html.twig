@@ -1,0 +1,18 @@
+{% extends "template.html.twig" %}
+
+
+{% block body %}
+<p>Test</p>
+
+<form action="{{baseUrl}}/exemple/test" method="post">
+    <label for="test">Test : </label>
+    <input type="text" name="test" id="test">
+    <br>
+    <br>
+    <input type="submit" value="Tester !">
+</form>
+
+{% if test is defined %}
+        {{ dump(test) }}
+{% endif %}
+{% endblock %}
